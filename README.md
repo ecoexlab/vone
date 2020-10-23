@@ -8,7 +8,10 @@ VONE is a meditary service between clients and drivers.
 ## Build
 
 ### Step 1 
+
+```
   $ npm start
+```
 
 ### Step 2
 
