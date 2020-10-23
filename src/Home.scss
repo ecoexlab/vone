@@ -1,0 +1,65 @@
+$primary-color: #ce2b1f;
+$warning-color-dark: #ffe564;
+$warning-color: #fff7d4;
+
+@font-face{
+  font-family: "Cookie Run";
+  font-weight:400;
+  src: url("./styles/fonts/CookieRun\ Regular.otf");
+}
+
+textarea {
+    margin-top: 48px;
+    width: 360px;
+  height: 320px;
+    border-radius: 10px;
+  border: solid 2px #000000;
+  background-color: #ffffff;
+  padding: 18px 12px 12px 18px;
+  font-family: "Cookie Run";
+  font-size: 13px;
+  font-weight: normal;
+}
+
+
+.area-logo{
+    margin-top: 48px;
+}
+
+
+.btn-order{
+    margin-top:8px;
+    width: 360px;
+  height: 43px;
+  border: none;
+  border-radius: 10px;
+  background-color: $primary-color;
+
+  font-family: "Cookie Run";
+  font-size: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.area-notice{
+   margin:auto;
+}
+
+.notice{
+  font-family: "Cookie Run";
+    font-size: 12px;
+    margin-top:32px;
+    padding: 16px 12px 12px 16px;
+    width: 360px;
+    height: 120px;
+  border-radius: 10px;
+  border-left: 4px solid $warning-color-dark;
+  text-align: left;
+  background-color: $warning-color;
+}

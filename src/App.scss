@@ -1,0 +1,32 @@
+
+$vone-color : rgb(218, 41,28);
+$vone-dark : rgba($vone-color, 0.88);
+
+.App {
+  width:100%;
+  text-align: center;
+  height:100%;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.align-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}  
+
+
+
+

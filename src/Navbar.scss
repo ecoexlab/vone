@@ -1,0 +1,9 @@
+
+$vone-color : rgb(218, 41,28);
+
+.navbar {
+    display: flex;
+    height: 46px;
+    background-color: $vone-color;
+    justify-content: space-between;
+}
