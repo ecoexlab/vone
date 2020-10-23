@@ -1,14 +1,14 @@
 VONE
 ====
 
-## Introduction
+## Intro
 
 VONE is a meditary service between clients and drivers.
 
 ## Build
 
 ### Step 1 
-`npm start`
+  $ npm start
 
 ### Step 2
 
