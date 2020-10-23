@@ -10,7 +10,7 @@ VONE is a meditary service between clients and drivers.
 ### Step 1 
 
 ```
-  $ npm start
+  $ npm install
 ```
 
 ### Step 2
