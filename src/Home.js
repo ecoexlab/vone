@@ -27,16 +27,27 @@ export default function Home() {
     const PORT = 3001;
 
     const [order, setOrder] = useState(`상차날짜: \n상차시간: \n상호 및 상차지: \n상차 담당자/연락처: \n상차방법: \n하차날짜: \n하차시간: \n상호 및 하차지: \n하차담당자/연락처: \n하차방법: \n차량 톤수 및 차종: \n차량댓수: \n물품/중량: \n요청사항: ` );
-
+    
+    const [name, setName] = useState('');
+    const [contact, setContact] = useState('');
 
 
     const onChangeOrder = e => {
       setOrder(e.target.value);
     }
+
+    const onChangeName = e => {
+      setName(e.target.value);
+    }
+
+    const onChangeContact = e => {
+      setContact(e.target.value);
+    }
+
+
   
     const formatOrder = (order) => {
       const orderInfos = order.split('\n');
-  
       const orderRequest = {};
   
       orderInfos.map((order) => {
@@ -44,6 +55,9 @@ export default function Home() {
         orderRequest[splittedStr[0]]=splittedStr[1];
         return splittedStr;
       })
+    
+      orderRequest["이름"] = name;
+      orderRequest["연락처"] = contact;
       
       return orderRequest;
     }
@@ -58,6 +72,8 @@ export default function Home() {
            
             console.log(response);
             setOrder('');
+            setName('');
+            setContact('');
             alert('접수가 완료되었습니다!');
         }).catch(function (error){
             alert('error');
@@ -72,6 +88,8 @@ export default function Home() {
         console.log(e);
       })
     }
+
+
     return (
         <div >
             <div className="area-logo">
@@ -82,8 +100,24 @@ export default function Home() {
          <div className="area-order">
            
             <textarea onChange={onChangeOrder} type="text" placeholder="상차날짜: &#13;&#10;상차시간: &#13;&#10;상호 및 상차지: &#13;&#10;상차 담당자/연락처: &#13;&#10;상차방법: &#13;&#10;하차날짜: &#13;&#10;하차시간: &#13;&#10;상호 및 하차지: &#13;&#10;하차담당자/연락처: &#13;&#10;하차방법: &#13;&#10;차량 톤수 및 차종: &#13;&#10;차량댓수: &#13;&#10;물품/중량: &#13;&#10;요청사항:" value={order}></textarea>
-           
-         </div>
+          
+        </div>
+        <div className="area-contact">
+          <div className="field-order">
+              <label>이름</label>
+              <input type="text" onChange={onChangeName} value={name}/>
+            </div>
+
+          
+          <div className="field-order">
+            <label>연락처</label>
+            <input type="text" onChange={onChangeContact} value={contact}/>
+          </div>
+        </div>
+          
+
+            
+         
 
 
         <div className="btn-area">
@@ -99,6 +133,7 @@ export default function Home() {
 
                 <p>- 반드시 항목간 Enter 입력해주세요!</p>
                 <p>- 항목별 순서를 꼭 지켜주세요!</p>
+                <p>- 접수 완료 후 입력하신 연락처로 배차정보를 알려드립니다.</p>
               </div>
         </div>
        
