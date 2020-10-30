@@ -19,8 +19,9 @@ scp -i AWS-Seoul.pem docker-compose.yml ec2-user@${serv_addr}:~/vone-order
 echo "Deploy in Server"
 ssh -i AWS-Seoul.pem ec2-user@${serv_addr} "$( cat <<'EOT'
 echo "SSH Connected to server"
-cd vone-api
-docker load -i ecoexlab.api.tar
+cd vone-order
+docker-compose down
+docker load -i ecoexlab.web.tar
 docker image prune
 docker-compose up -d
 EOT
