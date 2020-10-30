@@ -1,0 +1,9 @@
+version: '3.6'
+
+services:
+	web-server:
+		container_name: ecoexlab.web
+		build: ../
+		ports:
+			- "80:80"
+		image: ecoexlab.web:latest
