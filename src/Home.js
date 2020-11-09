@@ -7,13 +7,13 @@ import axios from 'axios';
 /*
 상차날짜: 10.15(목)
 상차시간: 오전 8시
-상호 및 상차지: 에이치알엠, 인천시 서구 오류동 1574-2
-상차 담당자/연락처: 김에코 010-1234-1234
+상차지:  인천시 서구 오류동 1574-2
+(상호)상차 담당자/연락처: (에이치알엠)김에코 010-1234-1234
 상차방법: 지게차
 하차날짜: 10.15(목)
 하차시간: ASAP
-상호 및 하차지: 한빛식품, 경기도 고양시 덕양구 내유길 106 나동
-하차 담당자/연락처: 박에코 010-8899-8899
+하차지: 경기도 고양시 덕양구 내유길 106 나동
+(상호)하차 담당자/연락처: (한빛식품) 박에코 010-8899-8899
 하차방법: 기사님 수작업
 차량 톤수 및 차종: 25톤 카고
 차량댓수: 1대
@@ -69,8 +69,7 @@ export default function Home() {
         console.log(orderRequest);
       
         axios.post(`${requestURL}:${PORT}/api/orders`,  orderRequest).then(response => {
-           
-            console.log(response);
+          
             setOrder('');
             setName('');
             setContact('');
@@ -78,15 +77,6 @@ export default function Home() {
         }).catch(function (error){
             alert('error');
         });
-    }
-
-    const sendSMS = () => {
-      axios.post(`${requestURL}:${PORT}/api/orders/sendSMS`).then(response => {
-        console.log(response);
-        alert('문자 발송 완료');
-      }).catch(e => {
-        console.log(e);
-      })
     }
 
 

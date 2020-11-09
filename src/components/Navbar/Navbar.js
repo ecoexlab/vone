@@ -1,6 +1,6 @@
 import React from 'react'
-import icon_hamburger from './assets/icon-hamburger.png';
-import icon_clock from './assets/icon-clock.png';
+import icon_hamburger from '../../assets/icons/icon-hamburger.png';
+import icon_clock from '../../assets/icons/icon-clock.png';
 import './Navbar.scss';
 
 export default function Navbar() {
